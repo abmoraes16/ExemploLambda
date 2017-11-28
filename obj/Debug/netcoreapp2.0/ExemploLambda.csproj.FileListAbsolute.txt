@@ -1,0 +1,10 @@
+c:\Users\41346828865\ExemploLambda\bin\Debug\netcoreapp2.0\ExemploLambda.deps.json
+c:\Users\41346828865\ExemploLambda\bin\Debug\netcoreapp2.0\ExemploLambda.runtimeconfig.json
+c:\Users\41346828865\ExemploLambda\bin\Debug\netcoreapp2.0\ExemploLambda.runtimeconfig.dev.json
+c:\Users\41346828865\ExemploLambda\bin\Debug\netcoreapp2.0\ExemploLambda.dll
+c:\Users\41346828865\ExemploLambda\bin\Debug\netcoreapp2.0\ExemploLambda.pdb
+c:\Users\41346828865\ExemploLambda\obj\Debug\netcoreapp2.0\ExemploLambda.csproj.CoreCompileInputs.cache
+c:\Users\41346828865\ExemploLambda\obj\Debug\netcoreapp2.0\ExemploLambda.AssemblyInfoInputs.cache
+c:\Users\41346828865\ExemploLambda\obj\Debug\netcoreapp2.0\ExemploLambda.AssemblyInfo.cs
+c:\Users\41346828865\ExemploLambda\obj\Debug\netcoreapp2.0\ExemploLambda.dll
+c:\Users\41346828865\ExemploLambda\obj\Debug\netcoreapp2.0\ExemploLambda.pdb
