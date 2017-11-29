@@ -38,28 +38,63 @@ namespace ExemploLambda
          new Alunos{ID=15,Nome="Pedro",Email="pedro@terra.com",Idade=17}
      };
 
-//LINQ
+    //LINQ
 
-/*     var al = from a in aluno where a.Idade > 20 && a.Idade <50 select a;
+    /*     var al = from a in aluno where a.Idade > 20 && a.Idade <50 select a;
 
-    foreach(Alunos w in al){
-        Console.WriteLine(w.Nome+" "+w.Email+" "+w.Idade+" "+w.ID);
-    } */
+        foreach(Alunos w in al){
+            Console.WriteLine(w.Nome+" "+w.Email+" "+w.Idade+" "+w.ID);
+        } */
 
-//LAMBDA
+    //LAMBDA
 
-/*     var al = aluno.Where(z => z.Idade>20 && z.Idade<50);
+    //EXEMPLO1
+    /*     var al = aluno.Where(z => z.Idade>20 && z.Idade<50);
 
 
-    foreach(Alunos w in al){
-        Console.WriteLine(w.Nome+" "+w.Email+" "+w.Idade+" "+w.ID);
-    } */
+        foreach(Alunos w in al){
+            Console.WriteLine(w.Nome+" "+w.Email+" "+w.Idade+" "+w.ID);
+        } */
 
-    var al = from a in aluno where a.Email.Contains("terra") orderby a.ID descending select a.Nome;
+    //EXEMPLO2
 
-    foreach(string w in al){
-        Console.WriteLine(w);
-    }
+    /*     var al = from a in aluno where a.Email.Contains("terra") orderby a.ID descending select a.Nome;
+
+        foreach(string w in al){
+            Console.WriteLine(w);
+        } */
+
+    //EXEMPLO3
+
+        /* var al = aluno.Count(a => a.Email.Contains("terra"));
+        Console.WriteLine(al); */
+
+
+        List<Produto> prod = new List<Produto>(){
+            new Produto{IdProduto=1,NomeProduto="Lapis",Preco=2,IdFornecedor=30},
+            new Produto{IdProduto=2,NomeProduto="Borracha",Preco=5,IdFornecedor=41},
+            new Produto{IdProduto=3,NomeProduto="Caneta",Preco=10,IdFornecedor=30},
+            new Produto{IdProduto=4,NomeProduto="Caderno",Preco=20,IdFornecedor=41}
+        };
+
+        List<Fornecedor> forn = new List<Fornecedor>(){
+            new Fornecedor{IdFornecedor=30, RazaoSocial="Faber Castel",Telefone="11"},
+            new Fornecedor{IdFornecedor=41, RazaoSocial="BIC",Telefone="56"},
+            new Fornecedor{IdFornecedor=51, RazaoSocial="Chameco",Telefone="45"}
+        };
+
+            var resultado = prod.Join(
+                forn, 
+                p => p.IdFornecedor,
+                f => f.IdFornecedor,
+                (p,f) => new {
+                    pNome = p.NomeProduto,
+                    fRazao = f.RazaoSocial
+            });
+
+            foreach(var x in resultado){
+                Console.WriteLine(x.pNome+" - "+x.fRazao);
+            }
 
         }
     }
